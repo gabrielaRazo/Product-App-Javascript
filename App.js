@@ -25,7 +25,11 @@ class UI {
   resetForm() {
     document.getElementById("product-form").reset();
   }
-  deleteProduct() {}
+  deleteProduct(element) {
+    if (element.name == "delete") {
+      element.parentElement.parentElement.parentElement.remove();
+    }
+  }
   showMessage() {}
 }
 //DOM Events
@@ -42,5 +46,10 @@ document.getElementById("product-form").addEventListener("submit", function(e) {
 });
 
 document.getElementById("product-list").addEventListener("click", function(e) {
+  /* Captura los elementos a los que le das click y te regresa las 
+  etiquetas que contienen ese elementos en HTML 
   console.log(e.target);
+  */
+  const ui = new UI();
+  ui.deleteProduct(e.target);
 });
