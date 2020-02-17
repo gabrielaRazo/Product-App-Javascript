@@ -47,6 +47,9 @@
                 <input
                   type="number"
                   id="year"
+                  min="1900"
+                  value="2020"
+                  max="2022"
                   placeholder="Year Product"
                   class="form-control"
                 />
@@ -59,8 +62,11 @@
             </form>
           </div>
         </div>
-        <div class="col-md-8"></div>
+        <div>
+          <div id="product-list" class="col-md-8"></div>
+        </div>
       </div>
     </div>
+    <script src="App.js"></script>
   </body>
 </html>
